@@ -27,14 +27,12 @@ jobs:
 
       # - name: Do excutable everywhere
       #   run: swift package init --type executable
-      - name: check pwd
-        run: pwd
-      - name: check ls
-        run: ls -a
+      # - name: check pwd
+      #   run: pwd
+      # - name: check ls
+      #   run: ls -a
       - name: go previous
-        run: cd ..
-      - name: check ls again
-        run: ls -a
+        run: cd ..; ls -a
       - name: Do Build
         working-directory: ./MyLibrary
         run: swift build -v
