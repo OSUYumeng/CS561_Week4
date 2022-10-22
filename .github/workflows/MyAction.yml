@@ -38,4 +38,4 @@ jobs:
         run: swift build -v
       - name: Do Test
         working-directory: ./MyLibrary
-        run: swift test -v
+        run: swift test --enable-code-coverage --filter MyLibraryTests
