@@ -28,8 +28,8 @@ jobs:
       # - name: Do excutable everywhere
       #   run: swift package init --type executable
       - name: Do Build
-        work-dirctory: /home/runner/work/CS561_Week4/MyLibrary
+        working-directory: /home/runner/work/CS561_Week4/MyLibrary
         run: swift build
       - name: Do Test
-        work-dirctory: /home/runner/work/CS561_Week4/MyLibrary
+        working-directory: /home/runner/work/CS561_Week4/MyLibrary
         run: swift test
