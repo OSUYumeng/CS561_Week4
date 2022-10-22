@@ -24,6 +24,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: cd into the Folder
+        run: cd MyLibrary
       - name: Do excutable everywhere
         run: swift package init --type executable
       - name: Do Build
