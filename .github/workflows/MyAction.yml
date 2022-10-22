@@ -31,6 +31,8 @@ jobs:
         run: pwd
       - name: check ls
         run: ls -a
+      - name: go previous
+        run: cd ..
       - name: Do Build
         working-directory: MyLibrary
         run: swift build -v
