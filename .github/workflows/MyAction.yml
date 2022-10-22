@@ -26,7 +26,6 @@ jobs:
     steps:
 
       - name: Do excutable everywhere
-        working-directory: ./MyLibrary
         run: swift package init --type executable
       - name: Do Build
         run: swift build
