@@ -33,6 +33,8 @@ jobs:
         run: ls -a
       - name: go previous
         run: cd ..
+      - name: check ls again
+        run: ls -a
       - name: Do Build
         working-directory: MyLibrary
         run: swift build -v
