@@ -29,7 +29,7 @@ jobs:
       #   run: swift package init --type executable
       - name: Do Build
         working-directory: /home/runner/work/CS561_Week4/MyLibrary
-        run: swift build
+        run: swift build -v
       - name: Do Test
         working-directory: /home/runner/work/CS561_Week4/MyLibrary
-        run: swift test
+        run: swift test -v
