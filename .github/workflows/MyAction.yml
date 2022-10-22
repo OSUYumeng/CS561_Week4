@@ -29,6 +29,8 @@ jobs:
       #   run: swift package init --type executable
       - name: check pwd
         run: pwd
+      - name: check ls
+        run: ls -a
       - name: Do Build
         working-directory: MyLibrary
         run: swift build -v
