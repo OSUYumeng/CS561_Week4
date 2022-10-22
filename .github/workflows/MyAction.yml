@@ -25,12 +25,10 @@ jobs:
 
     steps:
 
-      # - name: Do excutable everywhere
-      #   working-directory: ./MyLibrary
-      #   run: swift package init --type executable
+      - name: Do excutable everywhere
+        working-directory: ./MyLibrary
+        run: swift package init --type executable
       - name: Do Build
-        working-directory: ../MyLibrary
         run: swift build
       - name: Do Test  
-        working-directory: ../MyLibrary
         run: swift test
