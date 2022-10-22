@@ -36,8 +36,8 @@ jobs:
       - name: check ls again
         run: ls -a
       - name: Do Build
-        working-directory: MyLibrary
+        working-directory: ./MyLibrary
         run: swift build -v
       - name: Do Test
-        working-directory: MyLibrary
+        working-directory: ./MyLibrary
         run: swift test -v
