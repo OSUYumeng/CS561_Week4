@@ -1,0 +1,24 @@
+name: Test With My Action
+on: 
+  push:
+    branches: ["Yumeng/use-actions"]
+  pull_request:
+    branches: ["Yumeng/use-actions"]
+
+jobs:
+  my-job:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checout the repo
+        uses: actions/checkout@v3 
+      - name: Turn on mock
+        working-directory: ./mocker-app
+        run: node api.js&
+      - name: Do Build
+        working-directory: ./MyLibrary
+        run: swift build -v
+      - name: Do Test
+        working-directory: ./MyLibrary
+        run: swift test --enable-code-coverage --filter MyLibraryTests
