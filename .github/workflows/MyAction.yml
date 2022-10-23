@@ -2,6 +2,8 @@ name: Test With My Action
 on: 
   push:
     branches: ["Yumeng/use-actions"]
+  pull:
+    branches: ["Yumeng/use-actions"]
 
 jobs:
   my-job:

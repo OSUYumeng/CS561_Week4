@@ -19,13 +19,11 @@ class WeatherServiceImpl: WeatherService {
 
     func getTemperature() async throws -> Int {
         
-        print("my url is: ", url)
         return try await withCheckedThrowingContinuation { continuation in
             AF.request(url, method: .get).validate(statusCode: 200..<300).responseDecodable(of: Weather.self) { response in
                 switch response.result {
                 case let .success(weather):
                     let temperature = weather.main.temp
-                    print("My temperature is: ", temperature)
                     let temperatureAsInteger = Int(temperature)
                     continuation.resume(with: .success(temperatureAsInteger))
 

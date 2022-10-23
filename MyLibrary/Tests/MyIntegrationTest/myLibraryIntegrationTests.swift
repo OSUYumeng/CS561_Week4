@@ -11,18 +11,16 @@ final class myLibraryIntegrationTests: XCTestCase {
         // Given
         // Create a weather service (OOP)
         let myService = WeatherServiceImpl()
-        print("hi, there: ", myService)
             
         // When
         // Got the temperature
         let temp = try await myService.getTemperature()
-        print("hi again: ", temp)
         
         // Then
         // Check the temperature is what you expect
         
         //66
-        XCTAssertEqual(temp, 280)
+        XCTAssertEqual(temp, 288)
         
         
     }
