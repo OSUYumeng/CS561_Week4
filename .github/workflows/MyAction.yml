@@ -2,7 +2,7 @@ name: Test With My Action
 on: 
   push:
     branches: ["Yumeng/use-actions"]
-  pull:
+  pull_request:
     branches: ["Yumeng/use-actions"]
 
 jobs:
