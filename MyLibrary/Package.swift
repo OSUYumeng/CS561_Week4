@@ -32,6 +32,12 @@ let package = Package(
             resources: [
                 .process("data.json")
             ]),
+        .testTarget(
+            name: "MyIntegrationTest",
+            dependencies: ["MyLibrary"],
+            resources: [
+                .process("data.json")
+            ])
         // .testTarget(TestWeather
         //     name: "MyIntegrationTests",
         //     dependencies: ["MyLibrary"])
