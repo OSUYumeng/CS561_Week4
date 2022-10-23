@@ -1,18 +1,3 @@
-# name: Test With My Action
-# on:
-#   push:
-#     banches:
-#       -Use_Action
-# jobs: 
-#   build_my_swift:
-#     runs-on: ubuntu-latest
-    
-#     name: Build the Swift
-#     run: swift build
-
-#     name: Start the test
-#     run: swift test
-
 name: Test With My Action
 on: 
   push:
@@ -24,16 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-      # - name: Do excutable everywhere
-      #   run: swift package init --type executable
-      # - name: check pwd
-      #   run: pwd
-      # - name: check ls
-      #   run: ls -a
-      
       - name: checout the repo
         uses: actions/checkout@v3 
+      - name: Turn on mock
+        working-directory: ./mocker-app
+        run: node api.js
       - name: Do Build
         working-directory: ./MyLibrary
         run: swift build -v
